@@ -1,5 +1,7 @@
 Forked from Adafruit's BlueFruit LE Connect for Android, which can be found at https://github.com/adafruit/Bluefruit_LE_Connect_Android.  Added is a Voice menu that will allow for Speech-To-Text translation and transmission to the Uno for commands.  Attach the .ino, .h, and .cpp files to your Arduino Uno, and you are ready to go.  
 
+I will be posting updates to this project here, as well as on my blog at https://olsonetworks.wordpress.com.  I am no longer on Google+ anymore, but will attempt to remain relatively active on my blog.  
+
 Bluefruit LE Connect for Android
 ================================
 
