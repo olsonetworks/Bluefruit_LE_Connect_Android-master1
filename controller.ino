@@ -66,7 +66,7 @@
     #define NUMPIXELS                   16
     Adafruit_NeoPixel strip = Adafruit_NeoPixel(16, PIN, NEO_GRB + NEO_KHZ800);
     
-    
+   
 /*=========================================================================*/
 Adafruit_NeoPixel pixel = Adafruit_NeoPixel(NUMPIXELS, PIN);
 // Create the bluefruit object, either software serial...uncomment these lines
@@ -224,17 +224,34 @@ void loop(void)
     pixel.show(); // This sends the updated pixel color to the hardware.
   }
 
+
   // Voice
-  if (packetbuffer[1] == 'V') {
-    int i;
-    for (i = 0; i < 16; i = i + 1){
-    string string[i] = packetbuffer[i];
-    }
+  
+   if (packetbuffer[1] == 'V') {
+   const int SIZE = 256;
+   char inputs[SIZE];
+   int i;
+   for (i = 0; i < 256; i = i+1){
+    inputs[i] = packetbuffer[i];
+    //inputs = inputs[i];
+   }
+   
+  //String string;
+  //if (packetbuffer[1] == 'V') {
+  //  int i;
+  //  for (i = 0; i < 16; i = i + 1){
+  //buffer[i]=bt.read();
+  //    string[i] = packetbuffer[i];
+  //    string = string[i];}    
+  
+   
 
     
     
-    Serial.print ("You said "); Serial.print(string[i]);
-    if (string == "forward"){
+    Serial.print ("You said "); Serial.println(inputs[i]);
+   
+    
+    if (inputs == "!Vmove forward¼"){
       //int i;
       //for (i=0; i<16; i=i+1){
         
@@ -247,8 +264,9 @@ void loop(void)
       digitalWrite(8, LOW);
       analogWrite(11, 150);
       }
-    }
+    
     else {
+      Serial.print(inputs);
       Serial.println(" stop");
       digitalWrite(12, LOW);
       digitalWrite(9, LOW);
@@ -257,7 +275,10 @@ void loop(void)
       analogWrite(11, 0);
       analogWrite(3, 0);
     }
-  }
+  
+  
+   }
+
   
   // Buttons
   if (packetbuffer[1] == 'B') {
