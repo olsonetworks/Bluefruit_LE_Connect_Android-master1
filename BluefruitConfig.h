@@ -12,10 +12,10 @@
 // The following macros declare the pins that will be used for 'SW' serial.
 // You should use this option if you are connecting the UART Friend to an UNO
 // ----------------------------------------------------------------------------------------------
-#define BLUEFRUIT_SWUART_RXD_PIN       4    // Required for software serial!
-#define BLUEFRUIT_SWUART_TXD_PIN       5   // Required for software serial!
-#define BLUEFRUIT_UART_CTS_PIN         7   // Required for software serial!
-#define BLUEFRUIT_UART_RTS_PIN         10   // Optional, set to -1 if unused
+#define BLUEFRUIT_SWUART_RXD_PIN       40    // Required for software serial!
+#define BLUEFRUIT_SWUART_TXD_PIN       42   // Required for software serial!/
+#define BLUEFRUIT_UART_CTS_PIN         44   // Required for software serial!
+#define BLUEFRUIT_UART_RTS_PIN         46   // Optional, set to -1 if unused
 
 
 // HARDWARE UART SETTINGS
@@ -23,8 +23,8 @@
 // The following macros declare the HW serial port you are using. Uncomment
 // this line if you are connecting the BLE to Leonardo/Micro or Flora
 // ----------------------------------------------------------------------------------------------
-#ifdef Serial1    // this makes it not complain on compilation if there's no Serial1
-  #define BLUEFRUIT_HWSERIAL_NAME      Serial1
+#ifdef Serial3    // this makes it not complain on compilation if there's no Serial1
+  #define BLUEFRUIT_HWSERIAL_NAME      Serial3
 #endif
 
 
@@ -32,7 +32,7 @@
 // ----------------------------------------------------------------------------------------------
 // The following sets the optional Mode pin, its recommended but not required
 // ----------------------------------------------------------------------------------------------
-#define BLUEFRUIT_UART_MODE_PIN        2    // Set to -1 if unused
+#define BLUEFRUIT_UART_MODE_PIN        50    // Set to -1 if unused
 
 
 // SHARED SPI SETTINGS
