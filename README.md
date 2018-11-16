@@ -2,6 +2,9 @@ Forked from Adafruit's BlueFruit LE Connect for Android, which can be found at h
 
 I will be posting updates to this project here, as well as on my blog at https://olsonetworks.wordpress.com.  I am no longer on Google+ anymore, but will attempt to remain relatively active on my blog.  
 
+**UPDATE 11/15/2018***
+Attached to this project is now code for the Arduino Mega2560.  We can now use the hardware serial port on the mega, which provides much better response than the software serial on the Uno.  This also gives us plenty more room to the additional sensors that will be used in this project, mainly the hc-05 ultrasonic distance sensor, the triple-axis accelerometer/gyro/magnetometer, and the neopixel rings.  Also fixed, the string from the voice menu now reports the entire packetbuffer.  Had a problem where the packetbuffer was only sending one char, this was probably my horrible coding, but to be sure, I have re-written that portion.  Thanks!
+
 Bluefruit LE Connect for Android
 ================================
 
