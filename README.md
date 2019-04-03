@@ -5,6 +5,9 @@ I will be posting updates to this project here, as well as on my blog at https:/
 **UPDATE 11/15/2018***
 Attached to this project is now code for the Arduino Mega2560.  We can now use the hardware serial port on the mega, which provides much better response than the software serial on the Uno.  This also gives us plenty more room to the additional sensors that will be used in this project, mainly the hc-05 ultrasonic distance sensor, the triple-axis accelerometer/gyro/magnetometer, and the neopixel rings.  Also fixed, the string from the voice menu now reports the entire packetbuffer.  Had a problem where the packetbuffer was only sending one char, this was probably my horrible coding, but to be sure, I have re-written that portion.  Thanks!
 
+**UPDATE 4/3/2019***
+Added a separate sketch for use with Polulu 24V motor shield, this gives the added benefit of being able to use 24v motors for larger applications.  Still upload the bluefruit.h and packetparser.cpp to your Arduino.  Am still currently using the Mega as well.  
+
 Bluefruit LE Connect for Android
 ================================
 
